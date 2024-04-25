@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="module" src="main.js"></script>
+    <title>Kutya Webshop</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="nav">
+        <ul>
+          <li><a href="#">Admin</a></li>
+          <li><a href="#">Termékeink</a></li>
+          <li><a href="#">Személyes adatok</a></li>
+          <li><a href="#">Kosár 🛒</a></li>
+        </ul>
+      </div>
+      <div class="article">
+        <select name="sort-options" id="sort-options">
+          <option value="1">Rendezési szempont</option>
+          <option value="2">Név szerint növekvő ⬆</option>
+          <option value="3">Név szerint csökkenő ⬇</option>
+          <option value="4">Ár szerint növekvő ⬆</option>
+          <option value="5">Ár szerint csökkenő ⬇</option>
+        </select>
+        <input type="text" placeholder="Keresés" id="search-bar" />
+        <div class="card-container"></div>
+      </div>
+    </div>
+  </body>
+</html>
