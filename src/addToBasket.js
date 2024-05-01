@@ -1,5 +1,7 @@
 import basket from "../data/basket.js";
 import toys from "../data/toys.js";
+import createHtmlElement from "./createHtmlElement.js";
+import generateBasketText from "./generateBasketText.js";
 
 const addToBasketList = (i) => {
   const product = { name: toys[i].name, price: toys[i].price };
@@ -11,6 +13,9 @@ const addToBasket = () => {
   cards.on("click", (event) => {
     addToBasketList(event.target.id);
     console.log(basket);
+    const basketContainer = $(".basket");
+    const basketText = generateBasketText(basket);
+    createHtmlElement(basketContainer, basketText);
   });
 };
 

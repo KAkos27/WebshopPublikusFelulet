@@ -55,17 +55,19 @@ body {
 }
 
 .basket {
-  background-image: linear-gradient(#d9d9d9, #d9d9d9);
-  background-repeat: no-repeat;
-  background-position: top;
+  background-color: #d9d9d9;
   border-bottom-left-radius: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   grid-column: 10/13;
   grid-row: 1/3;
-  height: 95vh;
+  height: 100%;
+  padding: 4rem;
   position: relative;
-  transition: 1s ease;
   z-index: 1;
+}
+
+.basket table {
+  margin: auto;
 }
 
 .invisible {
