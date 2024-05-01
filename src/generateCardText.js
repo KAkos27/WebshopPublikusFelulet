@@ -5,7 +5,7 @@ const generateCardText = (toys) => {
       <div class='card'>
         <h3><strong>${toy.name}</strong></h3>
         <p>${toy.info}</p>
-        <p>${toy.price} Ft</p>
+        <p><strong>${toy.price} Ft</strong></p>
         <button id=${i}>Kosárba</button>
         <img src='assets/toy-pic.svg' alt=''>
       </div>`;

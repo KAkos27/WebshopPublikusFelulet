@@ -4,6 +4,7 @@ const generateBasketText = (basket) => {
         <tr>
             <th>Termék</th>
             <th>Ár</th>
+            <th>Db</th>
             <th>Törlés</th>
         </tr> `;
 
@@ -12,8 +13,10 @@ const generateBasketText = (basket) => {
     for (const key in item) {
       text += `<th>${item[key]}</th>`;
     }
-    text += `<th>X</th>`;
-    text += `</tr>`;
+    text += ` 
+        <th>asd</th>
+        <th>X</th>
+      </tr>`;
   });
   text += `</table>`;
 
