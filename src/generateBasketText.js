@@ -15,7 +15,7 @@ const generateBasketText = (basket) => {
     }
     text += ` 
         <th>asd</th>
-        <th>X</th>
+        <th>❌</th>
       </tr>`;
   });
   text += `</table>`;

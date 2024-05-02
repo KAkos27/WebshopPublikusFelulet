@@ -1,13 +1,11 @@
-import createCards from "./createCards.js";
 import addToBasket from "./addToBasket.js";
-import clickBasketButton from "./clickBaskeButton.js";
+import createCards from "./createCards.js";
 import orderCards from "./orderCards.js";
 
 const init = (toys) => {
   createCards(toys);
-  addToBasket();
-  clickBasketButton();
   orderCards(toys);
+  addToBasket();
 };
 
 export default init;
