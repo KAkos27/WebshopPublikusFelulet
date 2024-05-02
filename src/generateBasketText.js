@@ -8,14 +8,14 @@ const generateBasketText = (basket) => {
             <th>Törlés</th>
         </tr> `;
 
-  basket.forEach((item) => {
+  basket.forEach((item, i) => {
     text += `<tr>`;
     for (const key in item) {
       text += `<th>${item[key]}</th>`;
     }
     text += ` 
         <th>asd</th>
-        <th>❌</th>
+        <th class="delete-button" id=${i}>❌</th>
       </tr>`;
   });
   text += `</table>`;
