@@ -2,7 +2,7 @@ const generateBasketText = (basket) => {
   let text = `<table>`;
   let final = 0;
   basket.forEach((item, i) => {
-    let currentPrice = item.price * item.amount;
+    const currentPrice = item.price * item.amount;
     text += `
         <tr>
           <td>${item.name}</td>
@@ -19,8 +19,8 @@ const generateBasketText = (basket) => {
             <td></td>
             <td></td>
             <td></td>
-          </tr>`;
-  text += `</table>`;
+          </tr>
+        </table>`;
 
   return text;
 };
