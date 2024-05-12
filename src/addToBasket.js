@@ -22,7 +22,13 @@ const addToBasketList = (i) => {
   const contains = match > 0;
   if (contains) {
     basket[basketIndex].amount++;
+
+    const item = JSON.parse(localStorage.getItem(basketIndex));
+    item.amount++;
+    localStorage.removeItem(basketIndex);
+    localStorage.setItem(basketIndex, JSON.stringify(item));
   } else {
+    localStorage.setItem(i, JSON.stringify(product));
     basket.push(product);
   }
   match = 0;
