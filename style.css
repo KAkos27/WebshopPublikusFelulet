@@ -56,16 +56,25 @@ body {
   text-decoration: none;
 }
 
+.basket-container {
+  grid-column: 9/13;
+  grid-row: 1/3;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
 .basket {
-  background-color: #d9d9d9;
-  border-bottom-left-radius: 30px;
+  backdrop-filter: blur(8px);
+  background-color: #302e2eab;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #ffffff;
   grid-column: 9/13;
   grid-row: 1/3;
   height: 100%;
   padding: 4rem 2rem 2rem;
-  position: relative;
-  z-index: 1;
+  position: fixed;
 }
 
 .basket table {
@@ -76,19 +85,28 @@ body {
   display: none;
 }
 
+.delete-button {
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+
+.add-button {
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
 .delete-button,
 .add-button {
+  font-size: 1.5rem;
   text-align: center;
+  background-color: #302e2eab;
 }
 
 .delete-button:hover,
 .add-button:hover {
+  background-color: #a59c9cab;
   cursor: pointer;
   width: 2rem;
-}
-
-.final {
-  text-align: right;
 }
 
 .article {
@@ -104,6 +122,11 @@ body {
   width: 100%;
   position: relative;
   z-index: 0;
+}
+
+button:hover,
+select:hover {
+  cursor: pointer;
 }
 
 .card {
@@ -128,15 +151,15 @@ table {
   border-collapse: collapse;
 }
 
-th,
-td {
-  padding: 1rem;
-  width: 90%;
-}
-
 td {
   border-bottom: 1px solid #a39f9f;
   font-size: 0.8rem;
   min-width: 5rem;
+  padding: 1rem;
   text-align: left;
+  width: 100%;
+}
+
+.price-td {
+  min-width: 100px;
 }

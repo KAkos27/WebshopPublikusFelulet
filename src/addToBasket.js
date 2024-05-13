@@ -1,11 +1,11 @@
-import toys from "../data/toys.js";
 import initBasket from "./initBasket.js";
+import toys from "../data/toys.json" with { type: "json" };
 
 const addToBasketList = (i) => {
   const product = {
-    name: toys[i].name,
-    price: toys[i].price,
-    amount: toys[i].amount,
+    name: toys.toys[i].name,
+    price: toys.toys[i].price,
+    amount: toys.toys[i].amount,
   };
 
   let match = false;

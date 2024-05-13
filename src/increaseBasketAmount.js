@@ -1,7 +1,6 @@
 import initBasket from "./initBasket.js";
 
 const increaseAmount = (index) => {
-  debugger;
   const currentItem = JSON.parse(localStorage.getItem(index));
   currentItem.amount++;
   localStorage.removeItem(index);
@@ -12,6 +11,7 @@ const increaseBasketAmount = () => {
   const addButton = $(".add-button");
   addButton.on("click", (event) => {
     let index = event.target.id;
+    console.log(index);
     index = index.toString();
     index = index.replace("a", "");
     index = parseInt(index);
