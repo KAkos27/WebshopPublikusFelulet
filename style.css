@@ -76,14 +76,19 @@ body {
   display: none;
 }
 
-.delete-button:hover {
+.delete-button,
+.add-button {
+  text-align: center;
+}
+
+.delete-button:hover,
+.add-button:hover {
   cursor: pointer;
   width: 2rem;
 }
 
-.add-button:hover {
-  cursor: pointer;
-  width: 2rem;
+.final {
+  text-align: right;
 }
 
 .article {
@@ -133,5 +138,5 @@ td {
   border-bottom: 1px solid #a39f9f;
   font-size: 0.8rem;
   min-width: 5rem;
-  text-align: center;
+  text-align: left;
 }

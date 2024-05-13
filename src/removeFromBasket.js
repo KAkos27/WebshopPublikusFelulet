@@ -1,26 +1,27 @@
 import initBasket from "./initBasket.js";
 
-const removeFromArray = (toys, index) => {
-  const moreThanOne = toys[index].amount > 1;
+const removeFromArray = (index) => {
+  const currentItem = JSON.parse(localStorage.getItem(index));
+  const moreThanOne = currentItem.amount > 1;
   if (moreThanOne) {
-    toys[index].amount--;
+    currentItem.amount--;
+    localStorage.removeItem(index);
+    localStorage.setItem(index, JSON.stringify(currentItem));
   } else {
-    toys.splice(index, 1);
+    localStorage.removeItem(index);
   }
-  return toys;
 };
 
-const removeFromBasket = (toys) => {
+const removeFromBasket = () => {
   const deleteButton = $(".delete-button");
   deleteButton.on("click", (event) => {
     let index = event.target.id;
     index = index.toString();
-    index = index.replace("r", "");
+    index = index.replace("d", "");
     index = parseInt(index);
-    const orderedArray = removeFromArray(toys, index);
-    initBasket(orderedArray);
+    removeFromArray(index);
+    initBasket();
   });
 };
 
 export default removeFromBasket;
- 

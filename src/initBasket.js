@@ -3,12 +3,12 @@ import createHtmlElement from "./createHtmlElement.js";
 import removeFromBasket from "./removeFromBasket.js";
 import increaseBasketAmount from "./increaseBasketAmount.js";
 
-const initBasket = (basket) => {
+const initBasket = () => {
   const basketContainer = $(".basket");
-  const basketText = generateBasketText(basket);
+  const basketText = generateBasketText();
   createHtmlElement(basketContainer, basketText);
-  removeFromBasket(basket);
-  increaseBasketAmount(basket);
+  removeFromBasket();
+  increaseBasketAmount();
 };
 
 export default initBasket;

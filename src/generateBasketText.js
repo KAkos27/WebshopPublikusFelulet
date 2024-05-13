@@ -1,22 +1,23 @@
-const generateBasketText = (basket) => {
+const generateBasketText = () => {
   let text = `<table>`;
   let final = 0;
-  basket.forEach((item, i) => {
-    const currentPrice = item.price * item.amount;
+  Object.keys(localStorage).forEach((item) => {
+    const currentItem = JSON.parse(localStorage.getItem(item));
+    const currentPrice = currentItem.price * currentItem.amount;
     text += `
         <tr>
-          <td>${item.name}</td>
+          <td>${currentItem.name}</td>
           <td>${currentPrice} Ft</td>
-          <td>${item.amount} db</td>
-          <td class="delete-button" id=r${i}>❌</td>
-          <td class="add-button" id="a${i}">➕</td>
+          <td>${currentItem.amount} db</td>
+          <td class="delete-button" id=d${item}>❌</td>
+          <td class="add-button" id="a${item}">➕</td>
         </tr>`;
     final += currentPrice;
   });
   text += `<tr class="sum">
-            <td>Végösszeg: </td>
-            <td>${final} Ft</td>
-            <td></td>
+            <td><strong>Végösszeg: </strong></td>
+            <td class='final'>${final}</td>
+            <td>Ft</td>
             <td></td>
             <td></td>
           </tr>
