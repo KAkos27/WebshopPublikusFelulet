@@ -19,7 +19,7 @@ const generateBasketText = () => {
             <td class="price-td">${final} Ft</td>
             <td></td>
             <td></td>
-            <td></td>
+            <td></td> 
           </tr>
         </table>`;
 
